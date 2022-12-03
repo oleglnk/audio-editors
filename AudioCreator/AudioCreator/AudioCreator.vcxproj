@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EBB0F0CC-DDFD-458D-94CD-4D439A545D8C}</ProjectGuid>
+    <RootNamespace>AudioCreator</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>bass.lib;bassenc.lib;bass_fx.lib;bass_ape.lib;bass_mpc.lib;bass_tta.lib;basswma.lib;bassflac.lib;basswv.lib;</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>bass.lib;bassenc.lib;bass_fx.lib;bass_ape.lib;bass_mpc.lib;bass_tta.lib;basswma.lib;bassflac.lib;basswv.lib;</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioCore.h" />
+    <ClInclude Include="AudioCreator.h" />
+    <ClInclude Include="AudioCreatorDlg.h" />
+    <ClInclude Include="ChorusDlg.h" />
+    <ClInclude Include="CompressorDlg.h" />
+    <ClInclude Include="DistortionDlg.h" />
+    <ClInclude Include="EchoDlg.h" />
+    <ClInclude Include="Equalizer10Dlg.h" />
+    <ClInclude Include="Equalizer20Dlg.h" />
+    <ClInclude Include="Equalizer30Dlg.h" />
+    <ClInclude Include="FlangerDlg.h" />
+    <ClInclude Include="GargleDlg.h" />
+    <ClInclude Include="I3DL2ReverbDlg.h" />
+    <ClInclude Include="ParameQDlg.h" />
+    <ClInclude Include="RecordDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ReverbDlg.h" />
+    <ClInclude Include="SaveMP3Dlg.h" />
+    <ClInclude Include="SaveOGGDlg.h" />
+    <ClInclude Include="SaveWAVDlg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioCore.cpp" />
+    <ClCompile Include="AudioCreator.cpp" />
+    <ClCompile Include="AudioCreatorDlg.cpp" />
+    <ClCompile Include="ChorusDlg.cpp" />
+    <ClCompile Include="CompressorDlg.cpp" />
+    <ClCompile Include="DistortionDlg.cpp" />
+    <ClCompile Include="EchoDlg.cpp" />
+    <ClCompile Include="Equalizer10Dlg.cpp" />
+    <ClCompile Include="Equalizer20Dlg.cpp" />
+    <ClCompile Include="Equalizer30Dlg.cpp" />
+    <ClCompile Include="FlangerDlg.cpp" />
+    <ClCompile Include="GargleDlg.cpp" />
+    <ClCompile Include="I3DL2ReverbDlg.cpp" />
+    <ClCompile Include="ParameQDlg.cpp" />
+    <ClCompile Include="RecordDlg.cpp" />
+    <ClCompile Include="ReverbDlg.cpp" />
+    <ClCompile Include="SaveMP3Dlg.cpp" />
+    <ClCompile Include="SaveOGGDlg.cpp" />
+    <ClCompile Include="SaveWAVDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AudioCreator.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\AudioCreator.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\AudioCreator.ico" />
+    <Image Include="res\bg.bmp" />
+    <Image Include="res\Pause Off.ico" />
+    <Image Include="res\Pause On.ico" />
+    <Image Include="res\Play Off.ico" />
+    <Image Include="res\Play On.ico" />
+    <Image Include="res\playhead.bmp" />
+    <Image Include="res\Record Off.ico" />
+    <Image Include="res\Record On.ico" />
+    <Image Include="res\Reverse Off.ico" />
+    <Image Include="res\Reverse On.ico" />
+    <Image Include="res\Stop Off.ico" />
+    <Image Include="res\Stop On.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="AudioCreator.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
